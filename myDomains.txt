@@ -1,2 +1,2 @@
-keyword,youku
-baidu.com
+keyword,wn0
+wnlink.ru

@@ -35928,7 +35928,6 @@ DOMAIN,keyhole.xxx
 DOMAIN,keyslog.com
 DOMAIN,keytorg.ru
 DOMAIN,keywordsexplorer.com
-DOMAIN,keyworkd,youku
 DOMAIN,keyworldgayrimenkul.com
 DOMAIN,kezvideos.com
 DOMAIN,kf168xxx.com
@@ -84601,3 +84600,4 @@ DOMAIN,zzzxxx183.cc
 DOMAIN,zzzxxxx.shop
 DOMAIN,zzzxxxx33.com
 DOMAIN,zzzzsextou.com
+DOMAIN-KEYWORD,youku

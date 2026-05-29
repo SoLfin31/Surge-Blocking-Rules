@@ -1,3 +1,5 @@
+DOMAIN,//      domain    //
+DOMAIN,//      keyword    //
 DOMAIN,0-degreesexhibitions.co.uk
 DOMAIN,0-sex.nl
 DOMAIN,0000180.fortunecity.ws
@@ -347,6 +349,7 @@ DOMAIN,18girlssex.shop
 DOMAIN,18girlsxxx.shop
 DOMAIN,18gsextou.com
 DOMAIN,18h.mm-cg.com
+DOMAIN,18h.to
 DOMAIN,18hdporn.shop
 DOMAIN,18hentai.top
 DOMAIN,18hlw.com
@@ -4170,6 +4173,7 @@ DOMAIN,amazxxx.com
 DOMAIN,ambercutie.com
 DOMAIN,amberunmasked.com
 DOMAIN,ambrandt.com
+DOMAIN,amdcomic.net
 DOMAIN,amediatekacom.ru
 DOMAIN,ameland-actueel.nl
 DOMAIN,ameliagreenhall.com
@@ -6034,6 +6038,7 @@ DOMAIN,avcilaravans2.com
 DOMAIN,avcindy.co
 DOMAIN,avcnn.com
 DOMAIN,avcollectors.com
+DOMAIN,avcome.com
 DOMAIN,avcrack.com
 DOMAIN,avcrdl8.life
 DOMAIN,avdaisy.net
@@ -8400,6 +8405,7 @@ DOMAIN,blog-shmog.com
 DOMAIN,blog-star-x.com
 DOMAIN,blog.gentilkiwi.com
 DOMAIN,blog.innerpendejo.net
+DOMAIN,blog.reimu.net
 DOMAIN,blog.seekingarrangement.com
 DOMAIN,blog4ever.com
 DOMAIN,blogalileo.com
@@ -16643,6 +16649,7 @@ DOMAIN,dlisted.com
 DOMAIN,dlouha-videa.cz
 DOMAIN,dlouhaporna.cz
 DOMAIN,dlraw.to
+DOMAIN,dlsite.com
 DOMAIN,dlyavkontakte.ru
 DOMAIN,dm.link
 DOMAIN,dmdsystems.gay
@@ -20955,6 +20962,7 @@ DOMAIN,fatxvideosporn.com
 DOMAIN,fatzips.com
 DOMAIN,faux.gay
 DOMAIN,fav-hentai.com
+DOMAIN,favcomic.com
 DOMAIN,favcomics.com
 DOMAIN,favdoll.com
 DOMAIN,favejapanese.com
@@ -30113,6 +30121,9 @@ DOMAIN,hlxxx123.top
 DOMAIN,hlxxx1234.top
 DOMAIN,hm-s-eotkgay.top
 DOMAIN,hmama.tv
+DOMAIN,hman1.cc
+DOMAIN,hman80.com
+DOMAIN,hman81.com
 DOMAIN,hman83.com
 DOMAIN,hmanga.asia
 DOMAIN,hmangasearcher.com
@@ -31480,6 +31491,7 @@ DOMAIN,httpsweb3xxx.com
 DOMAIN,htube.com
 DOMAIN,htube.net
 DOMAIN,huajiao.com
+DOMAIN,huangman0.cc
 DOMAIN,huangse.love
 DOMAIN,huangsexs.cc
 DOMAIN,huangsexx.com
@@ -35042,6 +35054,7 @@ DOMAIN,jouwpagina.eu
 DOMAIN,jouwpagina.nl
 DOMAIN,jovencitas.gratis
 DOMAIN,jovenesyadultoscdelu.com
+DOMAIN,joyacg.top
 DOMAIN,joybear.com
 DOMAIN,joyce-meyer.nl
 DOMAIN,joyclub.com
@@ -35544,6 +35557,7 @@ DOMAIN,kamuktasexstory.com
 DOMAIN,kamuo.itch.io
 DOMAIN,kamushka.ru
 DOMAIN,kana-sensei.itch.io
+DOMAIN,kanav.ad
 DOMAIN,kanav.info
 DOMAIN,kanchana.in
 DOMAIN,kandyxxxdripz.com
@@ -39105,6 +39119,7 @@ DOMAIN,m-magdy.com
 DOMAIN,m-porn.xxx
 DOMAIN,m-porns.com
 DOMAIN,m-sexf5m4.pro
+DOMAIN,m.684c.com
 DOMAIN,m0retranslations.com
 DOMAIN,m1-analytics.top
 DOMAIN,m1fuping.lol
@@ -39643,6 +39658,7 @@ DOMAIN,mangosex.com
 DOMAIN,manhatic.com
 DOMAIN,manhuabika.com
 DOMAIN,manhuahot.com
+DOMAIN,manhuajl.com
 DOMAIN,manhuatop.org
 DOMAIN,manhub.com
 DOMAIN,manhunt.net
@@ -42347,6 +42363,7 @@ DOMAIN,moithub.com
 DOMAIN,mojamilfka.org
 DOMAIN,mojamilfka.sk
 DOMAIN,mojemilfka.cz
+DOMAIN,mojoin.com
 DOMAIN,mojoporn.info
 DOMAIN,mojoporntube.com
 DOMAIN,mojoporntube.net
@@ -67570,6 +67587,7 @@ DOMAIN,socialpulsex.help
 DOMAIN,socialsexbook.com
 DOMAIN,socialswinging.com
 DOMAIN,society15.com
+DOMAIN,socigames.com
 DOMAIN,socinquenta.com
 DOMAIN,socio-sib.ru
 DOMAIN,sockfetish.net
@@ -84600,4 +84618,20 @@ DOMAIN,zzzxxx183.cc
 DOMAIN,zzzxxxx.shop
 DOMAIN,zzzxxxx33.com
 DOMAIN,zzzzsextou.com
+DOMAIN-KEYWORD,asmr
+DOMAIN-KEYWORD,av
+DOMAIN-KEYWORD,dtjm
+DOMAIN-KEYWORD,fpoxxx
+DOMAIN-KEYWORD,hanime
+DOMAIN-KEYWORD,hentai
+DOMAIN-KEYWORD,jable
+DOMAIN-KEYWORD,jav
+DOMAIN-KEYWORD,jm
+DOMAIN-KEYWORD,madou
+DOMAIN-KEYWORD,pd365
+DOMAIN-KEYWORD,porn
+DOMAIN-KEYWORD,rou
+DOMAIN-KEYWORD,tktube
 DOMAIN-KEYWORD,wn0
+DOMAIN-KEYWORD,wnacg
+DOMAIN-KEYWORD,xhamster

@@ -18,32 +18,54 @@ jobs:
 
       - name: Download and Convert Rules
         run: |
-          # 1. 下载原始上游域名列表并过滤注释和空行
+          # 1. 初始化临时文件
+          touch domains.txt keywords.txt
+
+          # 2. 下载原始上游域名列表 (追加到 domains.txt)
           curl -L "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/nsfw-onlydomains.txt" \
             | grep -v '^#' \
             | grep -v '^$' \
-            > domains.txt
+            >> domains.txt
 
-          # 2. 检查本地是否存在自定义的 myDomains.txt
-          # 如果存在，则过滤掉它里面的注释和空行，然后追加到临时总列表中
+          # 3. 解析自定义的 myDomains.txt (进行域名与关键字分流)
           if [ -f "myDomains.txt" ]; then
-            echo "发现 myDomains.txt，正在并入自定义域名..."
-            grep -v '^#' myDomains.txt | grep -v '^$' >> domains.txt
+            echo "发现 myDomains.txt，正在分类提取普通域名与关键字..."
+            
+            # 提取关键字规则 (不区分大小写匹配 keyword,，并使用 cut 截取逗号后面的实际关键字)
+            grep -i '^keyword,' myDomains.txt | cut -d',' -f2 >> keywords.txt
+            
+            # 提取普通域名 (排除 keyword, 开头的行、注释和空行)
+            grep -v -i '^keyword,' myDomains.txt | grep -v '^#' | grep -v '^$' >> domains.txt
           fi
 
-          # 3. 对合并后的总列表进行去重和重新排序
-          # 这样可以防止你手动添加的域名与上游下载的域名发生重复
+          # 4. 去重和重新排序
           sort -u domains.txt -o domains.txt
+          sort -u keywords.txt -o keywords.txt
 
-          # 4. 生成 Surge 规则 (使用合并去重后的列表)
-          sed 's/^/DOMAIN,/' domains.txt \
-            > surge-nsfw.txt
+          # 5. 生成 Surge 规则
+          # 5.1 写入普通域名规则
+          sed 's/^/DOMAIN,/' domains.txt > surge-nsfw.txt
+          # 5.2 如果存在关键字，则追加 DOMAIN-KEYWORD 规则
+          if [ -s keywords.txt ]; then
+            sed 's/^/DOMAIN-KEYWORD,/' keywords.txt >> surge-nsfw.txt
+          fi
 
-          # 5. 生成 Sing-box 规则集 (使用合并去重后的列表)
-          jq -R . domains.txt | jq -s '{version: 1, rules: [{domain_suffix: .}]}' > singbox-nsfw.json
+          # 6. 生成 Sing-box 规则集 (JSON 格式)
+          # 将纯文本转为 Sing-box 需要的 JSON 数组区块
+          SUFFIX_JSON=$(jq -R . domains.txt | jq -s '{domain_suffix: .}')
+          
+          # 判断关键字文件是否有内容
+          if [ -s keywords.txt ]; then
+            KEYWORD_JSON=$(jq -R . keywords.txt | jq -s '{domain_keyword: .}')
+            # 如果有关键字，将 suffix 和 keyword 作为两个独立规则放入 rules 数组 (实现 OR 逻辑)
+            jq -n --argjson s "$SUFFIX_JSON" --argjson k "$KEYWORD_JSON" '{version: 1, rules: [$s, $k]}' > singbox-nsfw.json
+          else
+            # 如果没有关键字，只写入 suffix 规则
+            jq -n --argjson s "$SUFFIX_JSON" '{version: 1, rules: [$s]}' > singbox-nsfw.json
+          fi
 
-          # 6. 删除临时文件
-          rm domains.txt
+          # 7. 删除临时文件
+          rm domains.txt keywords.txt
 
       - name: Commit Changes
         run: |
@@ -52,6 +74,6 @@ jobs:
 
           git add surge-nsfw.txt singbox-nsfw.json
 
-          git commit -m "Auto update rules with custom domains" || echo "No changes"
+          git commit -m "Auto update rules with custom domains and keywords" || echo "No changes"
 
           git push
